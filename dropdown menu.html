@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Dropdown menu| pure CSS </title>
+    <style>
+        body{
+            background-color: #222;
+            text-align: center;
+            padding: 20px; 
+            
+        }
+   .dropdown{
+     background-color: #666;
+     display: inline-block;
+     border-radius: 10px;
+     width: 50%;
+     padding: 10px;}
+  
+ 
+    .dropdown:hover{
+     background: #777;}
+
+     label{
+    padding: 2px;
+     }
+
+  .dropdown .list{
+    display: none;
+    text-decoration: none;
+    padding: 5px;}
+
+ a{
+    text-decoration: none;
+    color:white ;}
+     
+ .dropdown label{
+    user-select: none;
+    color: white;}
+
+.dropdown input:checked + label + .list{
+    display: block;}
+
+.dropdown input{
+    display: none;}
+
+.dropdown input:checked + label::after{
+  content:"△" ;}
+
+.dropdown label::after{
+    content:"▽";}
+
+.line1 , .line2{
+border:1px solid #777 ;
+text-align:left;
+padding:2px 20px;
+border-radius: 2px;
+margin:0 ;
+background-color: #999;
+text-decoration: none;
+list-style-type: none;
+
+}
+
+.list :hover{
+    background:#1000;
+}
+
+
+  </style>
+</head>
+<body>
+    <nav class="dropdown">
+        <input type="checkbox" id="toggler">
+
+        <label for="toggler">
+            Dropdown
+        </label>
+
+         <ul class="list">
+            <li class="line1"><a href="">Item 1</a></li>
+            <li class="line2"><a href="">Item 2</a></li>
+            <li class="line1"><a href="">Item 3</a></li>
+        </ul>
+    </nav>
+    
+</body>
+</html>
